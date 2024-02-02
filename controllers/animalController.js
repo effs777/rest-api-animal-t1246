@@ -3,6 +3,7 @@ import {db} from '../db/conn.js';
 const getAnimal = async (req, res)=>{
   const sql = `select *from tbl_animal order by id`;
   const result = await db.query(sql);
+  
   res.json(result);
 };
 
